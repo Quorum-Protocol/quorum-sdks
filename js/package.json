@@ -1,0 +1,50 @@
+{
+  "name": "@quorum/sdk",
+  "version": "1.0.0",
+  "description": "Quorum Protocol JavaScript/TypeScript SDK — browser and Node.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "keywords": [
+    "quorum",
+    "authentication",
+    "multi-party",
+    "argon2"
+  ],
+  "homepage": "https://github.com/Quorum-Protocol/quorum-sdks#readme",
+  "bugs": {
+    "url": "https://github.com/Quorum-Protocol/quorum-sdks/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Quorum-Protocol/quorum-sdks.git",
+    "directory": "js"
+  },
+  "license": "Apache-2.0",
+  "author": "Wafula-Ian01",
+  "type": "commonjs",
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --max-warnings 0",
+    "prepublishOnly": "npm run typecheck && npm run test && npm run build"
+  },
+  "dependencies": {
+    "argon2-browser": "^1.18.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10",
+    "vitest": "^1.5.0",
+    "@types/node": "^20.12.7"
+  }
+}
