@@ -10,8 +10,20 @@ license = { text = "Apache-2.0" }
 readme = "README.md"
 requires-python = ">=3.9"
 keywords = ["quorum", "authentication", "multi-party", "argon2"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Security :: Cryptography",
+  "Topic :: Software Development :: Libraries",
+]
 dependencies = [
-    "httpx>=0.27.0",
+    "httpx>=0.28.1",
     "argon2-cffi>=23.1.0",
 ]
 
@@ -19,8 +31,10 @@ dependencies = [
 dev = ["pytest>=8.1", "pytest-asyncio>=0.23", "respx>=0.21"]
 
 [project.urls]
+Homepage      = "https://quorum-opal.vercel.app/"
 Repository = "https://github.com/Quorum-Protocol/quorum-sdks"
 Documentation = "https://docs.quorum.dev/sdks/python"
+"Bug Tracker" = "https://github.com/quorum-protocol/quorum-sdks/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["quorum"]
