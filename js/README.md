@@ -1,4 +1,4 @@
-# @quorum/sdk
+# @quorum-sdk/sdk
 
 JavaScript/TypeScript SDK for the Quorum Protocol API.
 Works in browsers (via Argon2 WebAssembly) and Node.js.
@@ -6,13 +6,13 @@ Works in browsers (via Argon2 WebAssembly) and Node.js.
 ## Install
 
 ```bash
-npm install @quorum/sdk
+npm install @quorum-sdk/sdk
 ```
 
 ## Quick start
 
 ```typescript
-import { QuorumClient, deriveShare, verifyWebhookSignature } from '@quorum/sdk';
+import { QuorumClient, deriveShare, verifyWebhookSignature } from '@quorum-sdk/sdk';
 
 const client = new QuorumClient({
   baseURL: 'https://api.quorum.dev',
