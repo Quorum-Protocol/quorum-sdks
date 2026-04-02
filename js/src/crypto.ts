@@ -83,7 +83,7 @@ async function deriveShareNode(pin: Uint8Array, salt: Uint8Array): Promise<strin
       outputLen: ARGON2_HASH_LEN,
     });
     // @node-rs/argon2 returns the raw hash as a Buffer
-    return bytesToHex(new Uint8Array(result));
+    return bytesToHex(typeof result === 'string' ? hexToBytes(result) : new Uint8Array(result));
   } catch {
     // Fallback to browser WASM
     return deriveShareBrowser(pin, salt);
@@ -117,7 +117,7 @@ export async function verifyWebhookSignature(
 ): Promise<boolean> {
   const data = typeof payload === 'string'
     ? new TextEncoder().encode(payload)
-    : payload;
+    : new Uint8Array(payload);
 
   const keyMaterial = await crypto.subtle.importKey(
     'raw',

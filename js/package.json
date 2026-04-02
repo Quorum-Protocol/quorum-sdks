@@ -1,5 +1,5 @@
 {
-  "name": "@quorum/sdk",
+  "name": "@quorum-sdk/sdk",
   "version": "1.0.0",
   "description": "Quorum Protocol JavaScript/TypeScript SDK — browser and Node.js",
   "main": "dist/index.cjs",
@@ -11,6 +11,10 @@
       "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
     }
+  },
+  "files": ["dist", "README.md"],
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [
     "quorum",
@@ -39,12 +43,14 @@
     "prepublishOnly": "npm run typecheck && npm run test && npm run build"
   },
   "dependencies": {
+    "@node-rs/argon2": "^2.0.2",
     "argon2-browser": "^1.18.0"
   },
   "devDependencies": {
+    "@types/argon2-browser": "^1.18.4",
+    "@types/node": "^20.12.7",
     "typescript": "^5.4.5",
     "vite": "^5.2.10",
-    "vitest": "^1.5.0",
-    "@types/node": "^20.12.7"
+    "vitest": "^1.5.0"
   }
 }

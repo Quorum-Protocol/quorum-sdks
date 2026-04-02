@@ -13,4 +13,8 @@ export default defineConfig({
       external: ['argon2-browser', '@node-rs/argon2'],
     },
   },
+  test: {
+    globals: true,
+    environment: 'node',
+  },
 });
