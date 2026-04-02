@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "quorum-sdk"
-version = "1.0.0"
+version = "1.0.1"
 description = "Quorum Protocol Python SDK — server-side request creation, webhook verification, group management"
 license = { text = "Apache-2.0" }
 readme = "README.md"
